@@ -1,0 +1,71 @@
+.form,
+.dataDisplay {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+.dataDisplay {
+  line-height: 0.8rem;
+}
+
+.form > button {
+  align-self: center;
+  margin-top: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.errorMessage {
+  align-self: center;
+  color: red;
+  font-size: small;
+}
+
+@media only screen and (min-width: 600px) {
+  .form,
+  .dataDisplay {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .form,
+  .dataDisplay {
+    width: 30%;
+  }
+}
+
+.bg {
+  animation: slide 6s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 6s;
+}
+.bg3 {
+  animation-duration: 7s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
